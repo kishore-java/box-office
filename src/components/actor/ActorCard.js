@@ -1,10 +1,12 @@
 /* eslint-disable */
 import React from 'react';
 
+import { StyledActorCard } from './ActorCard.styled';
+
 const ActorCard = ({ birthday, deathday, gender, country, image, name }) => {
   return (
-    <div>
-      <div>
+    <StyledActorCard>
+      <div className="img-wrapper">
         <img src={image} alt="actor" />
       </div>
       <h1>
@@ -12,8 +14,8 @@ const ActorCard = ({ birthday, deathday, gender, country, image, name }) => {
       </h1>
       <p>{country ? `comes from ${country}` : 'country unknown'}</p>
       <p>{birthday ? `born ${birthday}` : null}</p>
-      <p>{deathday ? `Died ${deathday}` : 'Alive'}</p>
-    </div>
+      <p className="deathday">{deathday ? `Died ${deathday}` : 'Alive'}</p>
+    </StyledActorCard>
   );
 };
 
