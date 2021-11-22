@@ -80,7 +80,7 @@ const Home = () => {
             label="Actors"
             id="actors-search"
             value="people"
-            checked={isShowsSearch}
+            checked={!isShowsSearch}
             onChange={onRadioChange}
           />
         </div>
